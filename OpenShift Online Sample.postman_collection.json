@@ -1,0 +1,70 @@
+{
+	"info": {
+		"_postman_id": "3f86e5e1-84f7-4218-8a79-4170ee3df88b",
+		"name": "OpenShift Online Sample",
+		"description": "Sample for creation of a Project in OpenShift Online using REST APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Project",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "KDYnKPVrWg_b9-CWpjBMnlOUePNoe5tH",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authentication",
+						"value": "Bearer: rnN1L-E3PZHtJ9BRFA5N_7DRX0oRYsWrUgO98",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"kind\": \"ProjectRequest\",\n    \"apiVersion\": \"v1\",\n    \"displayName\": \"82520759\",\n    \"description\": \"test project from postman\",\n    \"metadata\": {\n        \"labels\": {\n            \"name\": \"82520759\",\n            \"namespace\": \"82520759\"\n        },\n        \"name\": \"82520759\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.pro-us-east-1.openshift.com:443/oapi/v1/projectrequests",
+					"protocol": "https",
+					"host": [
+						"api",
+						"pro-us-east-1",
+						"openshift",
+						"com"
+					],
+					"port": "443",
+					"path": [
+						"oapi",
+						"v1",
+						"projectrequests"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
